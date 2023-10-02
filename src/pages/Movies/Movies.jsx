@@ -9,6 +9,8 @@ const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
 
+  
+
   useEffect(() => {
     const currentQuery = searchParams.get('query');
     if (!currentQuery) return;
@@ -28,7 +30,7 @@ const Movies = () => {
     <>
       <Form setSearchParams={setSearchParams} />
       {movies.length > 0 && <FilmsList movies={movies} />}
-    </>
+      </>
   );
 };
 
